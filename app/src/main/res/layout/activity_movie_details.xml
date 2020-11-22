@@ -222,6 +222,7 @@
             android:contentDescription="@string/chris_evans"
             android:paddingRight="8dp"
             android:src="@drawable/chris_evans"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintBottom_toBottomOf="@+id/actor_imageView3"
             app:layout_constraintEnd_toStartOf="@+id/actor_imageView3"
             app:layout_constraintStart_toEndOf="@+id/actor_imageView1"
@@ -246,6 +247,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/mark_ruffalo"
             android:paddingRight="8dp"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintBottom_toBottomOf="@+id/actor_imageView4"
             app:layout_constraintEnd_toStartOf="@+id/actor_imageView4"
             app:layout_constraintStart_toEndOf="@+id/actor_imageView2"
@@ -270,6 +272,7 @@
             android:layout_height="wrap_content"
             android:contentDescription="@string/chris_evans"
             android:src="@drawable/chris_hemsworth"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/actor_imageView3"
             app:layout_constraintTop_toBottomOf="@id/barrier_cast" />
 
