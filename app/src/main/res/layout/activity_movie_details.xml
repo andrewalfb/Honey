@@ -192,12 +192,12 @@
 
         <ImageView
             android:id="@+id/actor_imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
             android:contentDescription="@string/robert_downey_jr."
+
             android:src="@drawable/robert_downey_jr"
-            android:paddingRight="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/actor_imageView2"
             app:layout_constraintEnd_toStartOf="@+id/actor_imageView2"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -211,20 +211,21 @@
             android:text="@string/robert_downey_jr."
             android:textColor="@color/white_avengers"
             android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/actor_imageView1"
             app:layout_constraintStart_toStartOf="@+id/actor_imageView1"
-            app:layout_constraintTop_toBottomOf="@+id/actor_imageView1" />
+            app:layout_constraintTop_toBottomOf="@+id/actor_imageView1"/>
 
         <ImageView
             android:id="@+id/actor_imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginLeft="8dp"
             android:contentDescription="@string/chris_evans"
-            android:paddingRight="8dp"
             android:src="@drawable/chris_evans"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintBottom_toBottomOf="@+id/actor_imageView3"
             app:layout_constraintEnd_toStartOf="@+id/actor_imageView3"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/actor_imageView1"
             app:layout_constraintTop_toTopOf="@+id/actor_imageView3" />
 
@@ -237,19 +238,20 @@
             android:textColor="@color/white_avengers"
             android:textSize="12sp"
             android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/actor_imageView2"
             app:layout_constraintStart_toStartOf="@+id/actor_imageView2"
             app:layout_constraintTop_toBottomOf="@+id/actor_imageView2" />
 
         <ImageView
             android:id="@+id/actor_imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginLeft="8dp"
             android:src="@drawable/mark_ruffalo"
-            android:paddingRight="8dp"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintBottom_toBottomOf="@+id/actor_imageView4"
             app:layout_constraintEnd_toStartOf="@+id/actor_imageView4"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/actor_imageView2"
             app:layout_constraintTop_toTopOf="@+id/actor_imageView4" />
 
@@ -262,16 +264,20 @@
             android:textColor="@color/white_avengers"
             android:textSize="12sp"
             android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/actor_imageView3"
             app:layout_constraintStart_toStartOf="@+id/actor_imageView3"
             app:layout_constraintTop_toBottomOf="@+id/actor_imageView3" />
 
         <ImageView
             android:id="@+id/actor_imageView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginLeft="8dp"
             android:contentDescription="@string/chris_evans"
             android:src="@drawable/chris_hemsworth"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/actor_imageView3"
             app:layout_constraintTop_toBottomOf="@id/barrier_cast" />
@@ -285,6 +291,7 @@
             android:textColor="@color/white_avengers"
             android:textSize="12sp"
             android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/actor_imageView4"
             app:layout_constraintStart_toStartOf="@+id/actor_imageView4"
             app:layout_constraintTop_toBottomOf="@+id/actor_imageView4" />
