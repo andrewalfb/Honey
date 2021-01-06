@@ -12,5 +12,6 @@
     <color name="white_avengers">#ECECEC</color>
     <color name="gray_avengers">#6D6D80</color>
     <color name="white_actor">#D8D8D8</color>
+    <color name="background_main">#191926</color>
 
 </resources>

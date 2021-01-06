@@ -10,8 +10,8 @@
     android:visibility="visible">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:paddingHorizontal="16dp"
         android:paddingBottom="20dp"
         tools:context=".MovieDetailsActivity">
@@ -221,13 +221,14 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="1:1"
-            android:layout_marginLeft="8dp"
             android:contentDescription="@string/chris_evans"
             android:src="@drawable/chris_evans"
+            android:layout_marginLeft="8dp"
             app:layout_constraintEnd_toStartOf="@+id/actor_imageView3"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/actor_imageView1"
-            app:layout_constraintTop_toTopOf="@+id/actor_imageView3" />
+            app:layout_constraintTop_toTopOf="@+id/actor_imageView3"
+            android:layout_marginStart="8dp" />
 
         <TextView
             android:id="@+id/actor_textView2"
@@ -253,7 +254,9 @@
             app:layout_constraintEnd_toStartOf="@+id/actor_imageView4"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/actor_imageView2"
-            app:layout_constraintTop_toTopOf="@+id/actor_imageView4" />
+            app:layout_constraintTop_toTopOf="@+id/actor_imageView4"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/mark_ruffalo" />
 
         <TextView
             android:id="@+id/actor_textView3"
@@ -280,7 +283,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/actor_imageView3"
-            app:layout_constraintTop_toBottomOf="@id/barrier_cast" />
+            app:layout_constraintTop_toBottomOf="@id/barrier_cast"
+            android:layout_marginStart="8dp" />
 
         <TextView
             android:id="@+id/actor_textView4"
