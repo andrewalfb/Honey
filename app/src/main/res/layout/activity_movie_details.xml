@@ -10,11 +10,18 @@
     android:visibility="visible">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="16dp"
         android:paddingBottom="20dp"
         tools:context=".MovieDetailsActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintGuide_end="192dp"
+            android:orientation="vertical"/>
 
         <ImageView
             android:id="@+id/avengers_img"
@@ -36,8 +43,10 @@
             android:textColor="@color/white_avengers"
             android:textSize="12sp"
             android:textStyle="normal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/avengers_img" />
+            app:layout_constraintBottom_toBottomOf="@+id/avengers_img"
+            app:layout_constraintStart_toStartOf="@+id/guideline_margin_start"
+            app:layout_constraintTop_toTopOf="@+id/avengers_img"
+            app:layout_constraintVertical_bias="0.943" />
 
         <TextView
             android:id="@+id/movie_name_textView"
@@ -49,7 +58,7 @@
             android:textColor="@color/white_avengers"
             android:textSize="40sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_margin_start"
             app:layout_constraintTop_toBottomOf="@+id/age_title_textView" />
 
         <TextView
@@ -61,35 +70,35 @@
             android:textColor="@color/red_avengers"
             android:textSize="14sp"
             android:textStyle="normal"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_margin_start"
             app:layout_constraintTop_toBottomOf="@id/movie_name_textView" />
 
-        <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/barrier_categories"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:barrierDirection="bottom"
-            app:barrierMargin="4dp"
-            app:constraint_referenced_ids="categories_movie_textView" />
+<!--        <androidx.constraintlayout.widget.Barrier-->
+<!--            android:id="@+id/barrier_categories"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:barrierDirection="bottom"-->
+<!--            app:barrierMargin="4dp"-->
+<!--            app:constraint_referenced_ids="categories_movie_textView" />-->
 
         <!--stars block-->
 
         <ImageView
             android:id="@+id/star_icon_imageView1"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:contentDescription="@string/star_description"
             android:src="@drawable/star_icon"
             app:layout_constraintBottom_toBottomOf="@+id/star_icon_imageView2"
             app:layout_constraintEnd_toStartOf="@+id/star_icon_imageView2"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_margin_start"
             app:layout_constraintTop_toTopOf="@+id/star_icon_imageView2" />
 
         <ImageView
             android:id="@+id/star_icon_imageView2"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:contentDescription="@string/star_description"
             android:src="@drawable/star_icon"
             app:layout_constraintBottom_toBottomOf="@+id/star_icon_imageView3"
@@ -100,8 +109,8 @@
 
         <ImageView
             android:id="@+id/star_icon_imageView3"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:contentDescription="@string/star_description"
             android:src="@drawable/star_icon"
             app:layout_constraintBottom_toBottomOf="@+id/star_icon_imageView4"
@@ -111,8 +120,8 @@
 
         <ImageView
             android:id="@+id/star_icon_imageView4"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:contentDescription="@string/star_description"
             android:src="@drawable/star_icon"
             app:layout_constraintBottom_toBottomOf="@+id/star_icon_imageView5"
@@ -122,8 +131,8 @@
 
         <ImageView
             android:id="@+id/star_icon_imageView5"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:contentDescription="@string/star_description"
             android:src="@drawable/star_icon_empty"
             app:layout_constraintBottom_toBottomOf="@+id/count_reviews_textView"
@@ -140,7 +149,7 @@
             android:textColor="@color/gray_avengers"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/star_icon_imageView5"
-            app:layout_constraintTop_toBottomOf="@id/barrier_categories" />
+            app:layout_constraintTop_toBottomOf="@+id/categories_movie_textView" />
         <!--   stars block end-->
         <androidx.constraintlayout.widget.Barrier
             android:id="@+id/barrier_stars"
@@ -161,22 +170,22 @@
             android:textColor="@color/white_avengers"
             android:textSize="14sp"
             android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/guideline_margin_start"
             app:layout_constraintTop_toBottomOf="@+id/barrier_stars" />
 
         <TextView
             android:id="@+id/storyline_text_textView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
             android:alpha="0.75"
             android:fontFamily="sans-serif-light"
-            android:gravity="center_vertical"
             android:lineSpacingExtra="4dp"
             android:text="@string/storyline_text"
             android:textColor="@color/white"
             android:textSize="14sp"
             android:textStyle="normal"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_margin_start"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_margin_end"
             app:layout_constraintTop_toBottomOf="@+id/storyline_title" />
 
         <TextView
@@ -189,7 +198,7 @@
             android:textColor="@color/white_avengers"
             android:textSize="14sp"
             android:textStyle="normal"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_margin_start"
             app:layout_constraintTop_toBottomOf="@+id/storyline_text_textView" />
 
         <androidx.constraintlayout.widget.Barrier
@@ -210,7 +219,7 @@
             android:src="@drawable/robert_downey_jr"
             app:layout_constraintEnd_toStartOf="@+id/actor_imageView2"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_margin_start"
             app:layout_constraintTop_toTopOf="@+id/actor_imageView2" />
 
         <TextView
@@ -287,7 +296,7 @@
             app:layout_constraintDimensionRatio="1:1"
             android:contentDescription="@string/chris_evans"
             android:src="@drawable/chris_hemsworth"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_margin_end"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/actor_imageView3"
             app:layout_constraintTop_toBottomOf="@id/barrier_cast"
@@ -306,6 +315,20 @@
             app:layout_constraintEnd_toEndOf="@+id/actor_imageView4"
             app:layout_constraintStart_toStartOf="@+id/actor_imageView4"
             app:layout_constraintTop_toBottomOf="@+id/actor_imageView4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_margin_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="@dimen/space_2x"
+            android:orientation="vertical" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_margin_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="@dimen/space_2x"
+            android:orientation="vertical" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
