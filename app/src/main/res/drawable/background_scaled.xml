@@ -4,21 +4,17 @@
         <item>
             <shape android:shape="rectangle">
                 <gradient
-                    android:startColor="#1B1A28"
+                    android:startColor="#1B1B28"
                     android:centerColor="#1B1B28"
                     android:endColor="#34353F"
                     android:angle="-90" />
-                <size
-                    android:width="1500dp"
-                    android:height="1500dp">
-                </size>
             </shape>
         </item>
-        <item>
-            <bitmap
-                android:gravity="fill_horizontal|top"
-                android:src="@drawable/background_orig"
-                />
-        </item>
+<!--        <item>-->
+<!--            <bitmap-->
+<!--                android:gravity="fill_horizontal|top"-->
+<!--                android:src="@drawable/background_orig"-->
+<!--                />-->
+<!--        </item>-->
 
     </layer-list>

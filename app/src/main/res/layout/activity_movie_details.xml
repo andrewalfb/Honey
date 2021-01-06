@@ -16,18 +16,28 @@
         android:paddingBottom="20dp"
         tools:context=".MovieDetailsActivity">
 
+        <ImageView
+            android:id="@+id/avengers_img"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/background_orig"
+            android:scaleType="centerCrop"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/background_top_avengers" />
 
         <TextView
             android:id="@+id/age_title_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="140dp"
             android:text="@string/age_title"
             android:textColor="@color/white_avengers"
             android:textSize="12sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/avengers_img" />
 
         <TextView
             android:id="@+id/movie_name_textView"
@@ -223,7 +233,6 @@
             app:layout_constraintDimensionRatio="1:1"
             android:contentDescription="@string/chris_evans"
             android:src="@drawable/chris_evans"
-            android:layout_marginLeft="8dp"
             app:layout_constraintEnd_toStartOf="@+id/actor_imageView3"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/actor_imageView1"
@@ -249,7 +258,6 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="1:1"
-            android:layout_marginLeft="8dp"
             android:src="@drawable/mark_ruffalo"
             app:layout_constraintEnd_toStartOf="@+id/actor_imageView4"
             app:layout_constraintHorizontal_bias="0.5"
@@ -277,7 +285,6 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="1:1"
-            android:layout_marginLeft="8dp"
             android:contentDescription="@string/chris_evans"
             android:src="@drawable/chris_hemsworth"
             app:layout_constraintEnd_toEndOf="parent"
