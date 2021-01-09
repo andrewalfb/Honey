@@ -52,6 +52,30 @@
         android:layout_margin="@dimen/space_1x">
     </ImageView>
 
+
+    <ImageView
+        android:id="@+id/alfa_background"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:src="@drawable/alfa_background"
+        app:layout_constraintBottom_toBottomOf="@+id/avengers_movie"
+        app:layout_constraintEnd_toEndOf="@+id/avengers_movie"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/avengers_movie"
+        app:layout_constraintTop_toTopOf="@+id/avengers_movie"
+        app:layout_constraintVertical_bias="1.5">
+    </ImageView>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/background_stroke"
+        app:layout_constraintBottom_toBottomOf="@+id/alfa_background"
+        app:layout_constraintEnd_toEndOf="@+id/avengers_movie"
+        app:layout_constraintStart_toStartOf="@+id/avengers_movie"
+        app:layout_constraintTop_toTopOf="@+id/avengers_movie">
+    </ImageView>
+
     <TextView
         android:id="@+id/categories_movie_textView"
         android:layout_width="wrap_content"
@@ -133,6 +157,8 @@
         android:text="@string/count_reviews"
         android:textColor="@color/gray_avengers"
         android:textSize="8sp"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/space_1x"
         app:layout_constraintStart_toEndOf="@+id/star_icon_imageView5"
         app:layout_constraintTop_toBottomOf="@+id/categories_movie_textView" />
     <!--   stars block end-->
@@ -152,6 +178,7 @@
         app:layout_constraintTop_toBottomOf="@+id/avengers_movie" />
 
     <TextView
+        android:id="@+id/duration_movie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/space_3x"
@@ -161,7 +188,9 @@
         android:textStyle="bold"
         android:textSize="8sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/movie_name_text_view"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/movie_name_text_view">
+    </TextView>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
