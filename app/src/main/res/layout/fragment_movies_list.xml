@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/target_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_2x"
+        android:contentDescription="@string/target_list"
+        android:src="@drawable/ic_target"
+        app:layout_constraintEnd_toStartOf="@+id/title_list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_bias="0">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/title_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/movies_list_title"
+        android:textColor="@color/white_avengers"
+        app:layout_constraintBottom_toBottomOf="@+id/target_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/target_icon"
+        app:layout_constraintTop_toTopOf="@+id/target_icon" />
+
+    <ImageView
+        android:id="@+id/avengers_movie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/avengers_movie"
+        app:layout_constraintTop_toBottomOf="@+id/title_list"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/space_2x"
+        android:contentDescription="@string/avengers_movie_image">
+    </ImageView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_like_empty"
+        app:layout_constraintTop_toTopOf="@+id/avengers_movie"
+        app:layout_constraintEnd_toEndOf="@+id/avengers_movie"
+        android:layout_margin="@dimen/space_1x">
+    </ImageView>
+
+
+    <ImageView
+        android:id="@+id/alfa_background"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:src="@drawable/alfa_background"
+        app:layout_constraintBottom_toBottomOf="@+id/avengers_movie"
+        app:layout_constraintEnd_toEndOf="@+id/avengers_movie"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/avengers_movie"
+        app:layout_constraintTop_toTopOf="@+id/avengers_movie"
+        app:layout_constraintVertical_bias="1.5">
+    </ImageView>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/background_stroke"
+        app:layout_constraintBottom_toBottomOf="@+id/alfa_background"
+        app:layout_constraintEnd_toEndOf="@+id/avengers_movie"
+        app:layout_constraintStart_toStartOf="@+id/avengers_movie"
+        app:layout_constraintTop_toTopOf="@+id/avengers_movie">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/categories_movie_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/categories_movie"
+        android:textColor="@color/red_avengers"
+        android:textSize="8sp"
+        android:textStyle="normal"
+        android:layout_marginStart="@dimen/space_3x"
+        android:layout_marginBottom="@dimen/space_2x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/avengers_movie" />
+
+    <!--stars block-->
+
+    <ImageView
+        android:id="@+id/star_icon_imageView1"
+        android:layout_width="@dimen/space_1x"
+        android:layout_height="@dimen/space_1x"
+        android:contentDescription="@string/star_description"
+        android:src="@drawable/star_icon"
+        android:layout_marginStart="@dimen/space_3x"
+        app:layout_constraintBottom_toBottomOf="@+id/star_icon_imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/star_icon_imageView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/star_icon_imageView2" />
+
+    <ImageView
+        android:id="@+id/star_icon_imageView2"
+        android:layout_width="@dimen/space_1x"
+        android:layout_height="@dimen/space_1x"
+        android:contentDescription="@string/star_description"
+        android:src="@drawable/star_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/star_icon_imageView3"
+        app:layout_constraintEnd_toStartOf="@+id/star_icon_imageView3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/star_icon_imageView1"
+        app:layout_constraintTop_toTopOf="@+id/star_icon_imageView3" />
+
+    <ImageView
+        android:id="@+id/star_icon_imageView3"
+        android:layout_width="@dimen/space_1x"
+        android:layout_height="@dimen/space_1x"
+        android:contentDescription="@string/star_description"
+        android:src="@drawable/star_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/star_icon_imageView4"
+        app:layout_constraintEnd_toStartOf="@+id/star_icon_imageView4"
+        app:layout_constraintStart_toEndOf="@+id/star_icon_imageView2"
+        app:layout_constraintTop_toTopOf="@+id/star_icon_imageView4" />
+
+    <ImageView
+        android:id="@+id/star_icon_imageView4"
+        android:layout_width="@dimen/space_1x"
+        android:layout_height="@dimen/space_1x"
+        android:contentDescription="@string/star_description"
+        android:src="@drawable/star_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/star_icon_imageView5"
+        app:layout_constraintEnd_toStartOf="@+id/star_icon_imageView5"
+        app:layout_constraintStart_toEndOf="@+id/star_icon_imageView3"
+        app:layout_constraintTop_toTopOf="@+id/star_icon_imageView5" />
+
+    <ImageView
+        android:id="@+id/star_icon_imageView5"
+        android:layout_width="@dimen/space_1x"
+        android:layout_height="@dimen/space_1x"
+        android:contentDescription="@string/star_description"
+        android:src="@drawable/star_icon_empty"
+        app:layout_constraintBottom_toBottomOf="@+id/count_reviews_textView"
+        app:layout_constraintEnd_toStartOf="@+id/count_reviews_textView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/star_icon_imageView4"
+        app:layout_constraintTop_toTopOf="@+id/count_reviews_textView" />
+
+    <TextView
+        android:id="@+id/count_reviews_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/count_reviews"
+        android:textColor="@color/gray_avengers"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/space_1x"
+        app:layout_constraintStart_toEndOf="@+id/star_icon_imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/categories_movie_textView" />
+    <!--   stars block end-->
+
+    <TextView
+        android:id="@+id/movie_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_1x"
+        android:layout_marginStart="@dimen/space_3x"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/avengers_movie_name_one_row"
+        android:textColor="@color/white_avengers"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avengers_movie" />
+
+    <TextView
+        android:id="@+id/duration_movie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_3x"
+        android:fontFamily="sans-serif-medium"
+        android:text="137 MIN"
+        android:textColor="@color/gray_avengers"
+        android:textStyle="bold"
+        android:textSize="8sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movie_name_text_view">
+    </TextView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
